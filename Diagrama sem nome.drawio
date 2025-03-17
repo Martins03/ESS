@@ -226,7 +226,7 @@
             <mxPoint x="686" y="335" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="vs9A9dDgOiyKVh6lvaaV-7" value="WIFI" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+        <mxCell id="vs9A9dDgOiyKVh6lvaaV-7" value="WAN" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="417" y="248" width="38" height="38" as="geometry" />
         </mxCell>
         <mxCell id="vs9A9dDgOiyKVh6lvaaV-8" value="" style="endArrow=none;html=1;rounded=0;exitX=0.88;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" parent="1" source="ofh8wj_7EFLU0r1zvv-N-37" target="vs9A9dDgOiyKVh6lvaaV-7" edge="1">
