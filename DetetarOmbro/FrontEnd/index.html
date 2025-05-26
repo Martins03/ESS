@@ -1,0 +1,17 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Detetor de Ombro</title>
+    <style>
+        body { background: #121212; color: white; text-align: center; font-family: sans-serif; }
+        img { border: 4px solid white; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Detetor de Ombro (Shoulder Press)</h1>
+    <p>Aviso: Pressiona Q para parar o servidor no terminal</p>
+    <img src="{{ url_for('video_feed') }}" width="720" height="540">
+</body>
+</html>
