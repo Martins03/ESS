@@ -26,6 +26,8 @@ def lado_estado(ang_ombro, ang_cotovelo):
         return "subida"
     elif ang_ombro >= 170 and ang_cotovelo >= 160:
         return "topo"
+    elif 100 < ang_ombro < 170 and ang_cotovelo >= 160:
+        return "descida"
     else:
         return "erro"
 
@@ -90,25 +92,28 @@ def gen_frames():
                 erro_inicio = None
 
             if erros_validos >= ERROS_LIMITE:
-                status = "🚨 Notificacao ao PT — execucao incorreta"
+                status = "🚨 Notificação ao PT — execução incorreta repetida"
                 color = (0, 0, 255)
                 erros_validos = 0
             else:
                 if estado_esq == estado_dir:
                     if estado_esq == "inicial":
-                        status = "Posicao Inicial Correta"
+                        status = "✅ Posição Inicial Correta"
                         color = (0, 255, 0)
                     elif estado_esq == "subida":
-                        status = "↕Subida em curso — OK"
+                        status = "↕️ Subida em curso — OK"
                         color = (0, 255, 255)
+                    elif estado_esq == "descida":
+                        status = "⬇️ Descida controlada — OK"
+                        color = (255, 200, 0)
                     elif estado_esq == "topo":
                         status = "✅ Topo do Movimento"
                         color = (0, 255, 0)
                     else:
-                        status = "Ambos os lados com ma execucao"
+                        status = "❌ Ambos os lados com má execução"
                         color = (0, 0, 255)
                 else:
-                    status = f"Execucao desigual: Esq={estado_esq} / Dir={estado_dir}"
+                    status = f"⚠️ Execução desigual: Esq={estado_esq} / Dir={estado_dir}"
                     color = (0, 165, 255)
 
             # Mostrar no frame
