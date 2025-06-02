@@ -1,0 +1,12 @@
+
+inserir:
+$db = getDB();
+$stmt = $db->prepare("INSERT INTO errors (error_type, details, filename) VALUES (?, ?, ?)");
+$stmt->execute([$error_type, $details, $filename]);
+
+Para listar:
+$errors = $db->query("SELECT * FROM errors ORDER BY timestamp DESC")->fetchAll(PDO::FETCH_ASSOC);
+
+Para marcar como corrigido:
+$stmt = $db->prepare("UPDATE errors SET reviewed = 1 WHERE id = ?");
+$stmt->execute([$id]);
