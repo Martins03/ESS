@@ -29,61 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Detetar Ombro - Login</title>
+    <title>Monitoramento de Atletas com Visão Computacional - Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        body {
-            min-height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)), 
-            url('css/bg-gym.jpg') center center / cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .login-card {
-            background: rgba(255,255,255,0.92);
-            border-radius: 18px;
-            box-shadow: 0 0 24px 2px rgba(0,0,0,0.19);
-            padding: 2.5rem 2rem 2rem 2rem;
-            max-width: 340px;
-            width: 100%;
-        }
-        .login-card .fa-dumbbell {
-            color: #255C99;
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-        .login-card .btn {
-            background: #255C99;
-            color: #fff;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
-        .login-card .btn:hover {
-            background: #18345c;
-        }
-        .login-title {
-            color: #255C99;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        .login-label {
-            color: #333;
-        }
-        .shadow-inset {
-            box-shadow: inset 0 1px 4px rgba(0,0,0,0.08);
-        }
-    </style>
+    <link rel="icon" type="image/png" href="css/logo.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="login-card mx-auto">
         <div class="text-center mb-4">
             <i class="fa fa-dumbbell"></i>
-            <h3 class="login-title">Detetar Ombro</h3>
+            <h3 class="login-title">Monitoramento de Atletas com Visão Computacional </h3>
             <div class="small text-secondary mb-2">Gym Dashboard Login</div>
         </div>
         <form method="post" autocomplete="off">
@@ -103,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php endif; ?>
         </form>
         <div class="mt-3 text-center">
-            <small class="text-muted">© <?=date('Y')?> Detetar Ombro Gym System</small>
+            <small class="text-muted">© <?=date('Y')?> Monitoramento de Atletas com Visão Computacional System</small>
         </div>
     </div>
 </body>

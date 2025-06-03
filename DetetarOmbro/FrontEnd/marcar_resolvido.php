@@ -6,14 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'], $_POST['aluno_n
     $db = getDB();
     $id = intval($_POST['id']);
     $aluno_nome = trim($_POST['aluno_nome']);
-
-    // Procura o aluno pelo nome (podes adaptar para usar ID se preferires)
     $stmt = $db->prepare("SELECT id FROM students WHERE nome = ?");
     $stmt->execute([$aluno_nome]);
     $aluno = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($aluno) {
-        // Atualiza o erro: marca como resolvido e associa ao aluno
         $stmt = $db->prepare("UPDATE errors SET reviewed = 1, student_id = ? WHERE id = ?");
         $stmt->execute([$aluno['id'], $id]);
         header("Location: index.php?msg=ok");
